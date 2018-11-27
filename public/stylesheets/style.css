@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'GraphikLCG';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/GraphikLCG-Regular.otf");
+  src: local("GraphikLCG"), local("GraphikLCG-Regular"); }
+
+body, p, h1 {
+  margin: 0; }
+
+.font-h1, .interior__caption {
+  font: 24px GraphikLCG;
+  color: #373737; }
+
+.font-p, .interior__description {
+  font: 16px GraphikLCG;
+  color: #737373; }
+
+.button, .interior__button {
+  border-radius: 4px;
+  background-color: #ff4058;
+  font: 16px GraphikLCG;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; }
+
+.interior {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  margin: 96px auto 0;
+  box-shadow: -20px 0px 200px 20px #dfebfc;
+  width: 1264px;
+  height: 184px; }
+
+.interior__text-container {
+  margin: 32px 0 0 40px;
+  min-width: 570px; }
+
+.interior__description {
+  margin: 10px 0 23px 0; }
+
+.interior__button {
+  width: 244px;
+  height: 48px;
+  margin: 0 0 32px 0; }
+
+.interior__button-img {
+  background-image: url("../images/sofa.png");
+  height: 14px;
+  width: 20px;
+  margin: 0 25px 0 0; }
+
+.interior__img-container {
+  display: flex; }
+
+.interior__img-sink {
+  background-image: url("../images/sink.png");
+  height: 94px;
+  width: 94px;
+  margin: 32px 138px 0 0;
+  z-index: 3; }
+
+.interior__img-close {
+  background-image: url("../images/close.png");
+  height: 20px;
+  width: 20px;
+  margin: 10px 10px 0 0; }
+
+.interior__img-room {
+  background-image: url("../images/room.png");
+  height: 200px;
+  width: 479px;
+  margin: -16px 0 0 -360px;
+  position: absolute; }
