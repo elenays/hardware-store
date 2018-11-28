@@ -11,7 +11,7 @@ router.get('/goods/vanna', function(req, res, next) {
                 description: item.description, price: item.price, img: item.img });
         })
         .catch(function (err) {
-            // Crawling failed...
+
         });
 });
 

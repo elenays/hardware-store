@@ -8,7 +8,7 @@
 body, p, h1 {
   margin: 0; }
 
-.font-h1, .interior__caption, .item__caption, .item__column2-text, .item__column2-price {
+.font-h1, .interior__caption, .item__caption, .item__column2-text, .item__column2-price, .error__message {
   font: 24px GraphikLCG;
   color: #373737; }
 
@@ -91,7 +91,6 @@ body, p, h1 {
   display: flex; }
 
 .item__img {
-  background-image: url("../images/item-sink.png");
   height: 335px;
   width: 480px;
   margin: 100px 0 0 0; }
@@ -185,3 +184,7 @@ body, p, h1 {
 
 .item__column2-delivery-text {
   margin: 0 0 0 15px; }
+
+.error__message {
+  margin: 50px 0 0 0;
+  text-align: center; }
