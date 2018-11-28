@@ -16,5 +16,17 @@ router.get('/goods/vanna', function(req, res, next) {
 });
 
 
+router.get('/goods/kran', function(req, res, next) {
+    request('https://api.myjson.com/bins/dbkje')
+        .then(function (item) {
+            item = JSON.parse(item);
+            res.render('index', { title: item.title, article: item.article, size: item.size, color: item.color,
+                description: item.description, price: item.price, img: item.img });
+        })
+        .catch(function (err) {
+            // Crawling failed...
+        });
+});
+
 
 module.exports = router;
