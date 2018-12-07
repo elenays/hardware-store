@@ -37,9 +37,19 @@ app.use(function(err, req, res, next) {
 
 MongoClient.connect(db.url, (err, database) => {
     if (err) return console.log(err);
-
     db_cursor =  database.db(dbName);
+});
 
+app.get('/', (req, res) => {
+    db_cursor.collection('goods').find()
+    .toArray()
+        .then(function (item) {
+            res.render('index', {
+                items:item});
+        })
+        .catch(function (err) {
+            if(err) throw err;
+        });
 });
 
 app.get('/goods/:id', (req, res) => {
@@ -47,7 +57,7 @@ app.get('/goods/:id', (req, res) => {
     const details = {'_id': new ObjectID(id)};
     db_cursor.collection('goods').findOne(details)
         .then(function (item) {
-            res.render('index', {
+            res.render('product', {
                 title: item.title, article: item.article, size: item.size, color: item.color,
                 description: item.description, price: item.price, img: item.img});
         })
