@@ -1,9 +1,9 @@
 extends layout
 
 block content
-    div.item-min__column
+    .item-min__column
         each item in items
-            a(class='item-min__container', href='goods/#{item._id}')
+            a(class='item-min__container', href='goods/#{item._id}', target='_blank')
                 img(class='item-min__img', src='../images/#{item.img_min}')
-                div.item-min__caption #{item.title}
-                div.item-min__price #{item.price}
+                .item-min__caption #{item.title}
+                .item-min__price #{item.price}

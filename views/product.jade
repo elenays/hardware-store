@@ -1,47 +1,47 @@
 extends layout
 
 block content
-    div.interior
-        div.interior__text-container
+    .interior
+        .interior__text-container
             h1.interior__caption Как этот товар сочетается с другими в квартире?
             p.interior__description Постройте интерьер, выберите материалы и узнайте стоимость ремонта
-            div.interior__button
-                div.interior__button-img
+            .interior__button
+                .interior__button-img
                 Построить интерьер
-        div.interior__img-container
-            div.interior__img-room
-            div.interior__img-sink
-            div.interior__img-close
+        .interior__img-container
+            .interior__img-room
+            .interior__img-sink
+            .interior__img-close
 
-    div.item
-        div.item__container
-            div.item__img-container
+    .item
+        .item__container
+            .item__img-container
                 img(class='item__img', src='../images/#{img}')
-        div.item__description-container
+        .item__description-container
             h1.item__caption #{title}
             p.item__article Арктикул: #{article}
-            div.item__columns
-                div.item__column1
+            .item__columns
+                .item__column1
                     p.item__column1-size-text Размер:
                     p.item__column1-size #{size}
                     p.item__column1-color-text Цвет:
                     p.item__column1-color #{color}
                     p.item__column1-description #{description}
-                div.item__column2
-                    div.item__column2-price-container
+                .item__column2
+                    .item__column2-price-container
                         p.item__column2-text Цена:
-                        div.item__column2-discount -20%
+                        .item__column2-discount -20%
                         p.item__column2-price #{price}
-                    div.item__column2-delivery-container
-                        div.item__column2-delivery
-                            div.item__column2-delivery-img1
+                    .item__column2-delivery-container
+                        .item__column2-delivery
+                            .item__column2-delivery-img1
                             p.item__column2-delivery-text КИН холдинг
-                        div.item__column2-delivery
-                            div.item__column2-delivery-img2
+                        .item__column2-delivery
+                            .item__column2-delivery-img2
                             p.item__column2-delivery-text Доставка 2 дня от 100 ₽
-                        div.item__column2-delivery
-                            div.item__column2-delivery-img3
+                        .item__column2-delivery
+                            .item__column2-delivery-img3
                             p.item__column2-delivery-text Самовывоз из 3 точек
-                        div.item__column2-button
-                            div.item__column2-button-img
+                        .item__column2-button
+                            .item__column2-button-img
                             В корзину
