@@ -30,10 +30,15 @@ a {
   align-items: center;
 }
 
+.nav__link-container {
+  display: flex;
+}
+
 .nav__link {
   font: 22px GraphikLCG;
   color: #fff;
   cursor: pointer;
+  margin: 0 50px 0 0;
 }
 
 .nav__basket {
@@ -89,3 +94,12 @@ a {
   font: 22px Ubuntu;
   color: #fff;
 }
+
+.menu-icon {
+  display: none;
+}
+
+.menu {
+  display: none;
+}
+

@@ -8,17 +8,27 @@ html
     link(rel='stylesheet', href='/stylesheets/style__page__mobile.css')
     link(rel='stylesheet', href='/stylesheets/main.css')
     link(rel='stylesheet', href='/stylesheets/main__mobile.css')
-  body
+  body.body
     .nav
       .nav__logo
         .logo__img
         a(class='logo__text', href='../') Tools Shop
-      a.nav__link Магазины
-      a.nav__link Услуги
-      a.nav__link Акции
-      a.nav__link Статьи
-      a.nav__link Доставка и оплата
+      .nav__link-container
+        a.nav__link Магазины
+        a.nav__link Услуги
+        a.nav__link Акции
+        a.nav__link Статьи
+        a.nav__link Доставка и оплата
       .nav__basket
+      .menu-icon
+    .menu
+      a.menu__link Магазины
+      a.menu__link Услуги
+      a.menu__link Акции
+      a.menu__link Статьи
+      a.menu__link Доставка и оплата
+
+
 
     block content
 
@@ -28,4 +38,6 @@ html
         a(class='logo__text', href='../') Tools Shop
 
       p.footer__text 2018
+
+script(src="../javascripts/main.js")
 
