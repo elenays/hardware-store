@@ -4,7 +4,8 @@ html
     title Shop
     meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
     meta( http-equiv="X-UA-Compatible" content="ie=edge")
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/style__page.css')
+    link(rel='stylesheet', href='/stylesheets/style__page__mobile.css')
     link(rel='stylesheet', href='/stylesheets/main.css')
     link(rel='stylesheet', href='/stylesheets/main__mobile.css')
   body
@@ -20,3 +21,11 @@ html
       .nav__basket
 
     block content
+
+    .footer
+      .nav__logo
+        .logo__img
+        a(class='logo__text', href='../') Tools Shop
+
+      p.footer__text 2018
+

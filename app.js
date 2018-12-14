@@ -59,7 +59,7 @@ app.get('/goods/:id', (req, res) => {
         .then(function (item) {
             res.render('product', {
                 title: item.title, article: item.article, size: item.size, color: item.color,
-                description: item.description, price: item.price, img: item.img});
+                description: item.description, price: item.price, img: item.img, img_min: item.img_min});
         })
         .catch(function (err) {
             if(err) throw err;

@@ -74,3 +74,18 @@ a {
   padding: 20px;
   cursor: pointer;
 }
+
+.footer {
+  background-color: #ff4058;
+  height: 70px;
+  width: 100%;
+  margin: 100px auto 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer__text {
+  font: 22px Ubuntu;
+  color: #fff;
+}

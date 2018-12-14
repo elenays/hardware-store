@@ -113,6 +113,10 @@ body,p,h1 {
   display: flex;
 }
 
+.item__img-min {
+  display: none;
+}
+
 .item__img {
   height: 335px;
   width: 480px;
