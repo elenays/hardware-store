@@ -3,7 +3,19 @@ extends layout
 block content
     .item-min__column
         each item in items
-            a(class='item-min__container', href='goods/#{item._id}', target='_blank')
+            .item-min__container
                 img(class='item-min__img', src='../images/#{item.img_min}')
-                .item-min__caption #{item.title}
+                a(class='item-min__caption', href='goods/#{item._id}') #{item.title}
                 .item-min__price #{item.price}
+                .item-min__button
+                    .item-min__button-img
+                    Купить
+
+    .modal__form
+        form(method='POST' action='')
+            p.form__label Ваше имя:
+            input(type='text', name='name', class='form__input')
+            p.form__label Ваш телефон:
+            input(type='text', name='phone', class='form__input')
+            input(type='submit', value='Отправить' , class='form__button-send')
+            input(type='submit', value='Отмена' , class='form__button-cancel')
