@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const bodyParser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 const db = require('./config/db');
 let ObjectID = require('mongodb').ObjectID;
@@ -13,6 +14,7 @@ let db_cursor = null;
 // var usersRouter = require('./routes/users');
 
 var app = express();
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -65,6 +67,22 @@ app.get('/goods/:id', (req, res) => {
             if(err) throw err;
         });
 });
+
+app.post('/create_order', (req, res) => {
+    const name = req.body.name;
+    const phone = req.body.phone;
+    console.log(name);
+    console.log(phone);
+    db_cursor.collection('users').insert({name: name, phone: phone}, (err, result) => {
+        if (err) {
+            res.send({ 'error': 'Ошибка' });
+        } else {
+            res.sendStatus(200);
+        }
+    });
+});
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

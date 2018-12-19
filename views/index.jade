@@ -11,11 +11,10 @@ block content
                     .item-min__button-img
                     Купить
 
-    .modal__form
-        form(method='POST' action='')
-            p.form__label Ваше имя:
-            input(type='text', name='name', class='form__input')
-            p.form__label Ваш телефон:
-            input(type='text', name='phone', class='form__input')
-            input(type='submit', value='Отправить' , class='form__button-send')
-            input(type='submit', value='Отмена' , class='form__button-cancel')
+    .modal
+        p.modal__text Ваше имя:
+        input(type='text', name='name', class='modal__input', id='name')
+        p.modal__text Ваш телефон:
+        input(type='text', name='phone', class='modal__input', id='phone')
+        input(type='submit', value='Отправить' , class='modal__button-send')
+        input(type='button', value='Отмена' , class='modal__button-cancel')

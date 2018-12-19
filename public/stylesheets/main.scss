@@ -127,7 +127,7 @@ a {
   display: none;
 }
 
-.modal__form {
+.modal {
   background-color: #fff;
   height: 200px;
   width: 250px;
@@ -158,18 +158,22 @@ a {
   top:0;
 }
 
-.form__label {
+.shadow__visible {
+  display: block;
+}
+
+.modal__text {
   font: 18px GraphikLCG;
   color: #373737;
   margin: 10px;
 }
 
-.form__input {
+.modal__input {
   width: 220px;
   height: 20px;
 }
 
-.form__button-send {
+.modal__button-send {
   height: 30px;
   width: 90px;
   font: 15px GraphikLCG;
@@ -181,7 +185,7 @@ a {
   cursor: pointer;
 }
 
-.form__button-cancel {
+.modal__button-cancel {
   height: 30px;
   width: 90px;
   font: 15px GraphikLCG;
