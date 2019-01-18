@@ -4,6 +4,23 @@ let messageSend = document.getElementsByClassName('modal__button-send')[0];
 let addBasket = document.getElementsByClassName('item__column2-button')[0];
 let countPlus = document.getElementsByClassName('item__column2-count-plus')[0];
 let countMinus = document.getElementsByClassName('item__column2-count-minus')[0];
+let basket = document.getElementsByClassName('nav__basket')[0];
+
+basket.addEventListener('click', function (event) {
+
+    let productInBasket = [];
+    for (let i = 0; i< localStorage.length; i++) {
+
+        let productId = localStorage.key(i);
+        let productCount = localStorage.getItem(localStorage.key( i ));
+
+
+        productInBasket.push({id: productId, count:productCount});
+
+    }
+    console.log(productInBasket);
+
+});
 
 countPlus.addEventListener('click', function (event) {
     let number= document.getElementsByClassName('item__column2-count-number')[0];
@@ -22,7 +39,6 @@ countMinus.addEventListener('click', function (event) {
 addBasket.addEventListener('click', function (event) {
     let productId = document.getElementsByClassName('item')[0].dataset.productid;
     let countProduct = document.getElementsByClassName('item__column2-count-number')[0];
-
 
     localStorage.setItem( productId, countProduct.value);
 });

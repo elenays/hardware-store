@@ -70,6 +70,11 @@ app.get('/goods/:id', (req, res) => {
 
 app.get('/basket', (req, res) => {
     res.render('basket.jade');
+
+
+
+
+
 });
 
 app.post('/create_order', (req, res) => {
