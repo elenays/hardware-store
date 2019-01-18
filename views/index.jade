@@ -4,8 +4,9 @@ block content
     .item-min__column
         each item in items
             .item-min__container
-                img(class='item-min__img', src='../images/#{item.img_min}')
-                a(class='item-min__caption', href='goods/#{item._id}') #{item.title}
+                a(class='item-min__href', href='goods/#{item._id}')
+                    img(class='item-min__img', src='../images/#{item.img_min}')
+                    p.item-min__caption #{item.title}
                 .item-min__price #{item.price}
                 .item-min__button
                     .item-min__button-img

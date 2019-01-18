@@ -253,4 +253,25 @@ body,p,h1 {
   text-align: center;
 }
 
+.item__column2-count {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+}
 
+.item__column2-count-minus {
+  @extend .font-h1;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.item__column2-count-plus {
+  @extend .item__column2-count-minus;
+}
+
+.item__column2-count-number {
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  @extend .font-other;
+}

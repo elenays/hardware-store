@@ -1,7 +1,31 @@
 let menuOpen = document.getElementsByClassName('menu-icon')[0];
 let modalOpen = document.getElementsByClassName('item-min__button')[0];
 let messageSend = document.getElementsByClassName('modal__button-send')[0];
+let addBasket = document.getElementsByClassName('item__column2-button')[0];
+let countPlus = document.getElementsByClassName('item__column2-count-plus')[0];
+let countMinus = document.getElementsByClassName('item__column2-count-minus')[0];
 
+countPlus.addEventListener('click', function (event) {
+    let number= document.getElementsByClassName('item__column2-count-number')[0];
+    let res = Number(number.value) + 1;
+    number.value = res;
+});
+
+countMinus.addEventListener('click', function (event) {
+    let number= document.getElementsByClassName('item__column2-count-number')[0];
+    if (Number(number.value) > 1) {
+        let res = Number(number.value) - 1;
+        number.value = res;
+    }
+});
+
+addBasket.addEventListener('click', function (event) {
+    let productId = document.getElementsByClassName('item')[0].dataset.productid;
+    let countProduct = document.getElementsByClassName('item__column2-count-number')[0];
+
+
+    localStorage.setItem( productId, countProduct.value);
+});
 
 menuOpen.addEventListener('click', function (event) {
     let menu = document.getElementsByClassName('menu')[0];
@@ -43,6 +67,5 @@ messageSend.addEventListener('click', function (event) {
     xhr.open('POST', '/create_order');
     xhr.setRequestHeader('Content-type', 'application/json');
     xhr.send(data);
-
 });
 

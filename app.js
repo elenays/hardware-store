@@ -60,7 +60,7 @@ app.get('/goods/:id', (req, res) => {
     db_cursor.collection('goods').findOne(details)
         .then(function (item) {
             res.render('product', {
-                title: item.title, article: item.article, size: item.size, color: item.color,
+                _id: id, title: item.title, article: item.article, size: item.size, color: item.color,
                 description: item.description, price: item.price, img: item.img, img_min: item.img_min});
         })
         .catch(function (err) {
@@ -68,11 +68,14 @@ app.get('/goods/:id', (req, res) => {
         });
 });
 
+app.get('/basket', (req, res) => {
+    res.render('basket.jade');
+});
+
 app.post('/create_order', (req, res) => {
     const name = req.body.name;
     const phone = req.body.phone;
-    console.log(name);
-    console.log(phone);
+
     db_cursor.collection('users').insert({name: name, phone: phone}, (err, result) => {
         if (err) {
             res.send({ 'error': 'Ошибка' });

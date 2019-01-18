@@ -53,11 +53,15 @@ a {
   width: 300px;
 }
 
+.item-min__href {
+  display: flex;
+  flex-direction: column;
+}
+
 .item-min__caption {
   font: 18px GraphikLCG;
   color: #373737;
   margin: 15px 0 0 0;
-  display: block;
 }
 
 .item-min__price {
